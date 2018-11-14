@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start": "parcel ./src/mobx/index.html"
+  },
+  "alias": {
+    "shared": "./src/shared"
+  },
+  "dependencies": {
+    "mobx": "^5.6.0",
+    "mobx-react": "^5.3.6",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-decorators": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "parcel-bundler": "^1.10.3"
+  }
+}
