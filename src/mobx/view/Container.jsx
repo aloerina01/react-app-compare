@@ -1,4 +1,9 @@
 import React from 'react';
+import ItemList from './ItemList';
 
-const Container = () => <section>Mobx container</section>;
+const Container = () => 
+  <section>
+    <ItemList />
+  </section>;
+
 export default Container;
