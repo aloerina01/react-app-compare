@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import Usecase from './usecase';
 import Container from './view/Container';
+import ItemListStore from './store/ItemListStore';
 
 // create store
-const stores = {};
+const stores = {
+  itemListStore: new ItemListStore()
+};
 
 // init action
 Usecase.initialize();
