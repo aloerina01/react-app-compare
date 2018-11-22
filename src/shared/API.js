@@ -5,7 +5,7 @@ export function fetchItems() {
 }
 
 export function fetchUserSegment() {
-  return new Promise(resolve => setTimeout(resolve, 500)).then(response.userSegment);
+  return new Promise(resolve => setTimeout(resolve, 500)).then(() => response.userSegment);
 }
 
 export default { fetchItems, fetchUserSegment };

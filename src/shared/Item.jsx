@@ -1,13 +1,17 @@
 import React from 'react';
 
 const Item = ({ id, title, imageSrc, description }) => 
-  <div key={ id } class="item">
-    <div class="item-image">
+  <div key={ id } className="item">
+    <div className="item-image">
       <img src={ imageSrc } alt={ title } />
     </div>
-    <div class="item-data">
-      <p class="item-data-title">{ title }</p>
-      <p class="item-data-description">{ description }</p>
+    <div className="item-data">
+      <p className="item-data-title">{ title }</p>
+      <p className="item-data-description">{ description }</p>
+    </div>
+    <div className="item-reaction">
+      <i className="far fa-thumbs-up"></i>
+      <i className="far fa-thumbs-down"></i>
     </div>
   </div>
 
