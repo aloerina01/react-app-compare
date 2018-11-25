@@ -3,15 +3,17 @@ import { inject, observer } from 'mobx-react';
 import Item from 'shared/Item';
 import ItemListStore from '../store/ItemListStore';
 
-@inject(ItemListStore.getName())
+@inject(ItemListStore.name)
 @observer
 class ItemList extends React.Component {
   render() {
-    const { itemList } = this.props.itemListStore;
-    console.log(itemList);
+    const { pickedItems } = this.props.ItemListStore;
+    if (!pickedItems) {
+      return null;
+    }
     return (
-      <div className="list-item">
-        { itemList.map(item => <Item {...item} />) }
+      <div className="item-list">
+        { pickedItems.map(item => <Item key={item.id} {...item} />) }
       </div>
     );
   }

@@ -1,5 +1,6 @@
+import '../../scss/main.scss';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'mobx-react';
 import Usecase from './usecase';
 import Container from './view/Container';
@@ -7,14 +8,14 @@ import ItemListStore from './store/ItemListStore';
 
 // create store
 const stores = {
-  itemListStore: new ItemListStore()
+  ItemListStore: new ItemListStore()
 };
 
 // init action
-Usecase.initialize();
+Usecase.initialize(stores.ItemListStore); // TODO: DI functions
 
 // inject & render
-ReactDOM.render(
+render(
   <Provider {...stores} >
     <Container />
   </Provider>, 
