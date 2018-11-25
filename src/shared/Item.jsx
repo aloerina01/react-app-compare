@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Item = ({ id, title, imageSrc, description }) => 
+const Item = ({ id, title, src, description }) => 
   <div key={ id } className="item">
     <div className="item-image">
-      <img src={ imageSrc } alt={ title } />
+      <img src={ src } alt={ title } />
     </div>
     <div className="item-data">
       <p className="item-data-title">{ title }</p>
