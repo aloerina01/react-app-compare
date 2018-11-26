@@ -3,6 +3,7 @@ import ActionTypes from '../ActionTypes';
 
 export default function() {
   Dispatcher.dispatch({
-    type: ActionTypes.Initialize
+    type: ActionTypes.INITIALIZE,
+    payload: null
   });
 }

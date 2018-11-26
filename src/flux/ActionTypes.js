@@ -1,3 +1,3 @@
 export default {
-  Initialize: 'Initialize'
+  INITIALIZE: 'Initialize'
 }
