@@ -18,6 +18,8 @@
     "@babel/plugin-proposal-async-generator-functions": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.7.13",
+    "@types/react-dom": "^16.0.11",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.15.1"
   }

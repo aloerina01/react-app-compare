@@ -2,7 +2,7 @@ import API from '../../shared/API';
 
 const DISPLAY_ITEM_COUNT = 5;
 
-export function initialize(itemListStore) {
+export function initialize(itemListStore: any): void {
   API.fetchItems()
      .then(response => itemListStore.setItems(response))
      .then(items => shuffle(items))

@@ -1,6 +1,18 @@
 import React from 'react';
 
-const Item = ({ id, title, src, description }) => 
+// これは間違い
+// const Item = ({ id, title, src, description }: { id: string, title: string, src: string, description: string }): JSX.Element => 
+
+// 正しくはInterfaceで引数に使う型を定義して
+interface Props {
+  id: string,
+  title: string,
+  src: string,
+  description: string
+};
+
+// React.SFC<T>のジェネリクスとして定義する
+const Item: React.SFC<Props> = ({ id, title, src, description }): JSX.Element => 
   <div key={ id } className="item">
     <div className="item-image">
       <img src={ src } alt={ title } />

@@ -1,4 +1,9 @@
-const response = {
+export interface Response {
+  items: Array<Object>,
+  userSegment: Object
+};
+
+const response: Response = {
   items: [{
     id: 100,
     title: '1. Resist Google’s Attempts to Turn You Into a Robot',
