@@ -3,8 +3,9 @@ import React from 'react';
 // これは間違い
 // const Item = ({ id, title, src, description }: { id: string, title: string, src: string, description: string }): JSX.Element => 
 
-// 正しくはInterfaceで引数に使う型を定義して
-interface Props {
+// 正しくはInterface/typeで引数に使う型を定義して
+// React的にはどっちが正しいのか？？ 個人的にはtypeでいいのかなと思った。
+type Props = {
   id: string,
   title: string,
   src: string,
