@@ -1,8 +1,9 @@
 import API from '../../shared/API';
+import ItemListStore, { Item } from '../store/ItemListStore';
 
 const DISPLAY_ITEM_COUNT = 5;
 
-export function initialize(itemListStore: any): void {
+export function initialize(itemListStore: ItemListStore): void {
   API.fetchItems()
      .then(response => itemListStore.setItems(response))
      .then(items => shuffle(items))
@@ -11,12 +12,13 @@ export function initialize(itemListStore: any): void {
      .then(pickedItems => itemListStore.setPickedItems(pickedItems));
 }
 
-function pickupBanditArm(items) {
+function pickupBanditArm(items: Array<Item>): Array<Item> {
   // TODO: implements
   return items;
 }
 
-function shuffle(array = []) {
+// TODO: ジェネリクスの中身なんでもいいときはどう定義する？ anyはダメそう
+function shuffle(array: Array<any> = []): Array<any> {
   array = array.slice();
   for (let i = array.length -1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));

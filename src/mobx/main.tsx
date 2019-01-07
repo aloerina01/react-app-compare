@@ -6,8 +6,12 @@ import Usecase from './usecase';
 import Container from './view/Container';
 import ItemListStore from './store/ItemListStore';
 
+// TODO: 移動する
+export type ApplicationStores = {
+  ItemListStore: ItemListStore
+}
 // create store
-const stores = {
+const stores: ApplicationStores = {
   ItemListStore: new ItemListStore()
 };
 
