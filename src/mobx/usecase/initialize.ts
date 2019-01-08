@@ -1,5 +1,6 @@
-import API from '../../shared/API';
-import ItemListStore, { Item } from '../store/ItemListStore';
+import API from 'shared/API';
+import ItemListStore from '../store/ItemListStore';
+import * as Types from 'types';
 
 const DISPLAY_ITEM_COUNT = 5;
 
@@ -12,13 +13,14 @@ export function initialize(itemListStore: ItemListStore): void {
      .then(pickedItems => itemListStore.setPickedItems(pickedItems));
 }
 
-function pickupBanditArm(items: Array<Item>): Array<Item> {
+function pickupBanditArm(items: Array<Types.Item>): Array<Types.Item> {
   // TODO: implements
   return items;
 }
 
-// TODO: ジェネリクスの中身なんでもいいときはどう定義する？ anyはダメそう
-function shuffle(array: Array<any> = []): Array<any> {
+// Q. ジェネリクスの中身なんでもいいときはどう定義する？
+// A. 関数名の直後に<T>を置く。少し違和感がある。。
+function shuffle<T>(array: Array<T>): Array<T> {
   array = array.slice();
   for (let i = array.length -1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
