@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "parcel ./src/*/index.html",
-    "ts": "tsc ./src/mobx/main.tsx"
+    "ts": "tsc ./src/mobx/main.tsx",
+    "build": "webpack"
   },
   "alias": {
     "shared": "./src/shared"
@@ -23,6 +24,9 @@
     "@types/react-dom": "^16.0.11",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.15.1",
-    "typescript": "^3.2.2"
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   }
 }
