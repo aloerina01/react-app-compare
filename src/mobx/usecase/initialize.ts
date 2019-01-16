@@ -1,6 +1,6 @@
 import API from 'shared/API';
 import ItemListStore from '../store/ItemListStore';
-import * as Types from 'types';
+import * as Types from 'shared/types';
 
 const DISPLAY_ITEM_COUNT = 5;
 

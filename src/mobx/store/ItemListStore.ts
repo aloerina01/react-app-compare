@@ -3,8 +3,8 @@ import * as Types from 'shared/types';
 
 export default class ItemListStore {
 
-  @observable items: IObservableArray<Types.Item> = [];
-  @observable pickedItems: IObservableArray<Types.Item> = [];
+  @observable items: Array<Types.Item> = [];
+  @observable pickedItems: Array<Types.Item> = [];
 
   setItems(items: Array<Types.Item>): Array<Types.Item> {
     this.items = items;
@@ -13,7 +13,6 @@ export default class ItemListStore {
 
   setPickedItems(items: Array<Types.Item>): Array<Types.Item> {
     this.pickedItems = items;
-    this.pickedItems.replace();
     return this.pickedItems;
   }
 }

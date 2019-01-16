@@ -7,7 +7,12 @@
       "moduleResolution": "node",
       "jsx": "react",
       "experimentalDecorators": true,
-      "sourceMap": true
+      "sourceMap": true,
+      "lib": ["dom", "es7"],
+      "baseUrl": "./",
+      "paths": {
+        "shared/*": ["src/shared/*"]
+      }
   },
   "exclude": [
     "node_modules"

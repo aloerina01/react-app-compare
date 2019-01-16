@@ -14,15 +14,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$|`\.tsx$/,
+        test: /\.tsx?$/,
         use: 'ts-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-    alias: {
-      shared: './src/shared'
-    }
+    extensions: ['.tsx', '.ts', '.js']
   }
 }

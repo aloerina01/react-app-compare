@@ -1,6 +1,7 @@
 import response from 'shared/response';
+import * as Types from 'shared/types';
 
-export function fetchItems(): Promise<any> {
+export function fetchItems(): Promise<Array<Types.Item>> {
   return Promise.resolve().then(() => response.items);
 }
 

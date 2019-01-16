@@ -1,8 +1,7 @@
 import * as React from 'react';
 import ItemList from './ItemList';
-import { ApplicationStores } from '../types';
 
-const Container: React.SFC<Partial<ApplicationStores>> = () => 
+const Container: React.SFC = () => 
   <section>
     <ItemList />
   </section>;
